@@ -66,9 +66,11 @@ function changeColor(e) {
   totalClicks += 1;
   if (color == "red") {
     color = "blue";
+    e.target.innerHTML = "X"
     e.target.removeEventListener("click", changeColor);
   } else {
     color = "red";
+    e.target.innerHTML = "O"
     e.target.removeEventListener("click", changeColor);
   }
   setTimeout(() => {
