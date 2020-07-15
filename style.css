@@ -1,8 +1,8 @@
-
-
 h1 {
   text-align: center;
-  color: white;
+  text-transform: uppercase;
+  color: ghostwhite;
+  font-size: 4rem;
 }
 
 body {
@@ -11,7 +11,7 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 25vh 25vh 25vh;
+  grid-template-columns: 18vw 18vw 18vw;
   grid-gap: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -25,9 +25,10 @@ body {
 .square {
   background-color: ghostwhite;
   color: white;
-  height: 25vh;
-  width: 25vh;
-  font-size: 20vh;
+  height: 18vw;
+  width: 18vw;
+  font-size: 15vw;
+  line-height: 1.26;
   text-align: center;
   font-family: sans-serif;
 }
@@ -51,4 +52,17 @@ button {
 }
 .o {
   color: blue;
+}
+
+@media only screen and (max-device-width : 414px) and (max-device-height : 896px) {
+  .square {
+    height: 25vw;
+    width: 25vw;
+    font-size: 20vw;
+    line-height: 1.36;
+  }
+
+  .grid {
+    grid-template-columns: 25vw 25vw 25vw;
+  }
 }

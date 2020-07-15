@@ -54,6 +54,7 @@ button.addEventListener("click", reset);
 function resetGame() {
   for (let i = 0; i < box.length; i++) {
     box[i].addEventListener("click", changeColor);
+    box[i].innerHTML = ""
   }
   totalClicks = 0
   isWinner = false;
@@ -82,7 +83,7 @@ function changeColor(e) {
 
 function reset() {
   if (totalClicks > 0) {
-    for (let i = 0; i < box.length; i++) box[i].style.backgroundColor = "white";
+    for (let i = 0; i < box.length; i++) box[i].style.backgroundColor = "ghostwhite";
     resetGame();
   }
 }
